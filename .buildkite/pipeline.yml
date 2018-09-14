@@ -4,5 +4,12 @@ steps:
     artifact_paths: "artifacts/*"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+
   - label: Example test
     command: echo "Hello World!"
+
+  - name: ":hammer: Second script"
+    command: "script2.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+      

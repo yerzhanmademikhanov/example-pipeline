@@ -5,16 +5,15 @@ steps:
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
+  - name: "Linting"
+    command: "lint.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+
   - label: Example test
     command: echo "Hello World!"
 
   - name: ":hammer: Second script"
     command: "script2.sh"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
-
-
-  - name: "Linting"
-    command: shellcheck script2.h
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"

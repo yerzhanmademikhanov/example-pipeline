@@ -1,3 +1,6 @@
+env:
+  company: "to build matrix"
+
 steps:
   - name: ":hammer: Example Script"
     command: "script.sh"

@@ -5,12 +5,10 @@ steps:
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
-  - name: "Linting"
-    command: "lint.sh"
-    env:
-      company: "to distributed computing company"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+  steps:
+  - plugins:
+      shellcheck#v1.1.1:
+        files: scripts/*.sh
 
   - label: Example test
     command: echo "Hello World!"

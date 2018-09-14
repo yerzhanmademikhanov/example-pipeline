@@ -4,13 +4,13 @@
 # immediately exit if 'run_tests' failed
 set -uox pipefail
 
-echo $viavan
-
 echo "$PATH"
 PATH_CHECK_STATUS=$?
 
 sh ./run_tests.sh
 TESTS_EXIT_STATUS=$?
+
+echo $company
 
 sh ./clean_up.sh
 

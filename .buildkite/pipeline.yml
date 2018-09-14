@@ -1,5 +1,5 @@
 env:
-  company: "to build matrix"
+  company: "to work"
 
 steps:
   - name: ":hammer: Example Script"
@@ -10,6 +10,8 @@ steps:
 
   - name: "Linting"
     command: "lint.sh"
+    env:
+      company: "to distributed computing company"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
@@ -18,5 +20,7 @@ steps:
 
   - name: ":hammer: Second script"
     command: "script2.sh"
+    env:
+      company: "to build matrix of the future"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"

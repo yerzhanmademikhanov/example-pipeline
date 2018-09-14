@@ -1,4 +1,4 @@
-set -eo pipefail
+set -e
 
 echo "Hello World!"
 

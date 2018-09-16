@@ -5,10 +5,6 @@ steps:
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
-  - plugins:
-      shellcheck#v1.1.1:
-        files: ./*.sh
-
   - label: Example test
     command: echo "Hello World!"
 

@@ -8,6 +8,11 @@ steps:
   - label: Example test
     command: echo "Hello World!"
 
+  - name: "Docker step"
+    command: "docker_step.sh"
+    agents:
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+
   - name: ":hammer: Second script"
     command: "script2.sh"
     env:

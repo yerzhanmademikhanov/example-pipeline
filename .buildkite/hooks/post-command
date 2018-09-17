@@ -1,11 +1,9 @@
+
+#!/bin/bash
+
 echo "This is an example of a post-command hook from .buildkite/hooks/post-command"
 
 
 echo "trying to get time elapse"
 
-
-TIME_STARTED = $(buildkite-agent meta-data get "step-time-started")
-
-DIFF = $(date +%s) - $TIME_STARTED
-
-echo "Elapsed time: $DIFF" 
+echo $($(date +%s) - $(buildkite-agent meta-data get "step-time-started"))

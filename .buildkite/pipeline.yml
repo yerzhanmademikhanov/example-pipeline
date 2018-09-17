@@ -1,15 +1,15 @@
 steps:
-  - name: ":hammer: Example Script"
-    command: "script.sh"
-    artifact_paths: "artifacts/*"
+  - name: "Docker step"
+    command: "docker_step.sh"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 
   - label: Example test
     command: echo "Hello World!"
-
-  - name: "Docker step"
-    command: "docker_step.sh"
+    
+  - name: ":hammer: Example Script"
+    command: "script.sh"
+    artifact_paths: "artifacts/*"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
 

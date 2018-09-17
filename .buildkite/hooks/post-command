@@ -6,7 +6,7 @@ echo "This is an example of a post-command hook from .buildkite/hooks/post-comma
 
 echo "trying to get time elapse"
 
-echo "TIME STARTED $(buildkite-agent meta-data get "step-time-started")"
+echo "TIME STARTED $(buildkite-agent meta-data get "time-started-global")"
 
 echo "TIME FINISHED $(date +%s)"
 

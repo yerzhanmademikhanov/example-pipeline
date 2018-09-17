@@ -13,3 +13,5 @@ docker run hello-world
 docker ps -as | grep hello-world | docker rm $(awk '{print $1}')
 
 echo "finished running some docker stuff on pre-command"
+
+echo $(buildkite-agent meta-data get "instance-type")

@@ -8,4 +8,4 @@ echo "trying to get time elapse"
 
 echo $(buildkite-agent meta-data get "step-time-started")
 
-echo $($(date +%s) - $(buildkite-agent meta-data get "step-time-started"))
+echo "$(date +%s) - $(buildkite-agent meta-data get "step-time-started")"

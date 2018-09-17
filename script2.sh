@@ -18,5 +18,3 @@ env | grep -i -E 'git|node'
 
 echo $TESTS_EXIT_STATUS
 echo $PATH_CHECK_STATUS
-
-buildkite-agent meta-data set --job "release-version"

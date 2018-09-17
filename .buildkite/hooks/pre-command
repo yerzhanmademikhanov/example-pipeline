@@ -11,3 +11,8 @@ docker run hello-world
 docker ps -as | grep hello-world | docker rm $(awk '{print $1}')
 
 echo "finished running some docker stuff on pre-command"
+
+
+buildkite-agent meta-data set "step-time-started" $(date +%s)
+
+buildkite-agent meta-data get "step-time-started"

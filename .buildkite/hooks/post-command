@@ -10,4 +10,4 @@ echo "TIME STARTED $(buildkite-agent meta-data get "step-time-started")"
 
 echo "TIME FINISHED $(date +%s)"
 
-echo `expr $(date +%s) - $(buildkite-agent meta-data get "step-time-started")`
+echo `expr $(date +%s) - $(buildkite-agent meta-data get "time-started-global")`

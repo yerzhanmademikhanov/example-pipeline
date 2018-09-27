@@ -2,7 +2,7 @@ steps:
   - name: "Docker step"
     command: "docker_step.sh"
     agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:v-9def2ca70dc56d67-------1527087011}"
 
   - label: Example test
     command: echo "Hello World!"
@@ -11,11 +11,11 @@ steps:
     command: "script.sh"
     artifact_paths: "artifacts/*"
     agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:v-9def2ca70dc56d67-------1527087011}"
 
   - name: ":hammer: Second script"
     command: "script2.sh"
     env:
       company: "to build matrix of the future"
     agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:v-9def2ca70dc56d67-------1527087011}"

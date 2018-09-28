@@ -29,4 +29,6 @@ function inline_image {
   printf '\033]1338;url='"$1"';alt='"$2"'\a\n'
 }
 
+sleep 5
+
 inline_image 'artifact://artifacts/image.gif' 'Rainbows'

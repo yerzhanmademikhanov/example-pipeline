@@ -12,6 +12,8 @@ TESTS_EXIT_STATUS=$?
 
 echo $company
 
+sleep 3
+
 sh ./clean_up.sh
 
 env | grep -i -E 'git|node'

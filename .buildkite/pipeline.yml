@@ -4,13 +4,21 @@ steps:
     agents:
       queue: default
 
-  - label: Example test
-    command: echo "Hello World!"
+  - name: " Second script"
+    command: "sleep 7"
+    env:
+      company: "to build matrix of the future"
+    agents:
+      queue: default
+
+  - name: "Example Script :hammer: "
+    command: "script.sh"
+    artifact_paths: "artifacts/*"
     agents:
       queue: default
     
   - name: ":hammer: Example Script"
-    command: "script.sh"
+    command: "sleep 6"
     artifact_paths: "artifacts/*"
     agents:
       queue: default

@@ -1,6 +1,8 @@
 steps:
   - name: "Docker step"
     command: "docker_step.sh"
+    env:
+      company: "to build matrix of the future"
     agents:
       queue: default
 
@@ -14,12 +16,16 @@ steps:
   - name: "Example Script :hammer: "
     command: "script.sh"
     artifact_paths: "artifacts/*"
+    env:
+      company: "to build matrix of the future"
     agents:
       queue: default
     
   - name: ":hammer: Example Script"
     command: "sleep 6"
     artifact_paths: "artifacts/*"
+    env:
+      company: "to build matrix of the future"
     agents:
       queue: default
 

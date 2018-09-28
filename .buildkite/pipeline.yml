@@ -6,6 +6,8 @@ steps:
 
   - label: Example test
     command: echo "Hello World!"
+    agents:
+      queue: default
     
   - name: ":hammer: Example Script"
     command: "script.sh"

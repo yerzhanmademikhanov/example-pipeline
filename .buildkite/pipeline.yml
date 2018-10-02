@@ -13,32 +13,8 @@ steps:
     agents:
       queue: default
 
-  - name: "Linting"
-    command: "script.sh"
-    artifact_paths: "artifacts/*"
-    env:
-      company: "to build matrix of the future"
-    agents:
-      queue: default
-    
-  - name: ":hammer: Example Script"
-    command: "sleep 6"
-    artifact_paths: "artifacts/*"
-    env:
-      company: "to build matrix of the future"
-    agents:
-      queue: default
-
   - name: "JS Linting"
     command: "sleep 7"
-    env:
-      company: "to build matrix of the future"
-    agents:
-      queue: default
-
-  - name: " Unit tests "
-    command: "script.sh"
-    artifact_paths: "artifacts/*"
     env:
       company: "to build matrix of the future"
     agents:

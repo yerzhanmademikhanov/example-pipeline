@@ -6,14 +6,14 @@ steps:
     agents:
       queue: default
 
-  - name: " Second script"
+  - name: " Go tests"
     command: "sleep 7"
     env:
       company: "to build matrix of the future"
     agents:
       queue: default
 
-  - name: "Example Script :hammer: "
+  - name: "Linting"
     command: "script.sh"
     artifact_paths: "artifacts/*"
     env:
@@ -29,7 +29,44 @@ steps:
     agents:
       queue: default
 
-  - name: ":hammer: Second script"
+  - name: "JS Linting"
+    command: "sleep 7"
+    env:
+      company: "to build matrix of the future"
+    agents:
+      queue: default
+
+  - name: " Unit tests "
+    command: "script.sh"
+    artifact_paths: "artifacts/*"
+    env:
+      company: "to build matrix of the future"
+    agents:
+      queue: default
+
+  - name: ":hammer: Some extra script"
+    command: "script2.sh"
+    env:
+      company: "to build matrix of the future"
+    agents:
+      queue: default
+
+  - name: " Third script"
+    command: "sleep 7"
+    env:
+      company: "to build matrix of the future"
+    agents:
+      queue: default
+
+  - name: "Integration test"
+    command: "script.sh"
+    artifact_paths: "artifacts/*"
+    env:
+      company: "to build matrix of the future"
+    agents:
+      queue: default
+
+  - name: "Java tests"
     command: "script2.sh"
     env:
       company: "to build matrix of the future"

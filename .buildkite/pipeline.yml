@@ -1,40 +1,40 @@
 steps:
-  - name: "Docker step"
+  - name: "1 step"
     command: "docker_step.sh"
     env:
       company: "to build matrix of the future"
     agents:
       queue: default
 
-  - name: " Go tests"
+  - name: "2 step"
     command: "sleep 7"
     env:
       company: "to build matrix of the future"
     agents:
       queue: default
 
-  - name: "JS Linting"
+  - name: "3 step"
     command: "sleep 7"
     env:
       company: "to build matrix of the future"
     agents:
       queue: default
 
-  - name: ":hammer: Some extra script"
+  - name: "4 step"
     command: "script2.sh"
     env:
       company: "to build matrix of the future"
     agents:
       queue: default
 
-  - name: " Third script"
+  - name: "5 step"
     command: "sleep 7"
     env:
       company: "to build matrix of the future"
     agents:
       queue: default
 
-  - name: "Integration test"
+  - name: "6 step"
     command: "script.sh"
     artifact_paths: "artifacts/*"
     env:
@@ -42,7 +42,7 @@ steps:
     agents:
       queue: default
 
-  - name: "Java tests"
+  - name: "7 step"
     command: "script2.sh"
     env:
       company: "to build matrix of the future"
